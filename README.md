@@ -9,7 +9,7 @@
 
 ## Демо
 
-- Веб: _()_
+- Веб: _(https://51-react-app-with-library.vercel.app/)_
 
 ## Встановлення та запуск
 
