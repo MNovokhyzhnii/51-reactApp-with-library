@@ -1,0 +1,151 @@
+:root {
+  --theme: #00b8f0;
+  --bg: #0b1020;
+  --card: #141a2d;
+  --text: #e6ebff;
+  --muted: #9fb0d3;
+  --border: #27314f;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.logo-spin {
+  color: var(--theme);
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.row.wrap {
+  flex-wrap: wrap;
+}
+input {
+  background: #0f1528;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+}
+.btn {
+  background: var(--theme);
+  color: #08111f;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.icons__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+.icons__icon {
+  color: var(--theme);
+  font-size: 26px;
+}
+.icons__text small {
+  color: var(--muted);
+}
+
+.idle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.idle--on span strong {
+  color: #ffb545;
+}
+.idle--off span strong {
+  color: #2be38a;
+}
+
+.theme {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.theme .react-colorful {
+  width: 180px;
+  height: 120px;
+}
+.theme__input {
+  width: 110px;
+  text-transform: uppercase;
+}
+
+.preview {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+.footer {
+  margin-top: 22px;
+  color: var(--muted);
+}
